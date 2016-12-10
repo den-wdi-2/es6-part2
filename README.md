@@ -1,6 +1,18 @@
+<!--9:05 5 minutes-->
+
+<!--Hook: Remember ES6?  Today we are going to run through the rest of the major improvements of ES6, and we will wrap up with an ES6 quiz.  These improvements will help you DRY out your code, and put a little more power into your 3rd Projects.-->
+
 # ES6 Part 2
 
-### Concise Object Properties and Methods (5 / 75)
+## Objectives
+*By the end of this lesson, students will be able to:*
+
+- **Compare/contrast** features of ES5 and ES6
+- **Shorten** methods and properties with new ES6 syntax
+
+<!--9:10 5 minutes -->
+
+### Concise Object Properties and Methods
 
 ES6 allows us to shorten method definitions from:
 
@@ -36,14 +48,17 @@ let obj = {x:x, y:y}
 let obj = {x,y}
 ```
 
-#### You do: Concise methods and properties practice (5 / 80)
+<!--9:15 5 minutes -->
+
+#### You do: Concise methods and properties practice
 
 1. https://github.com/ga-wdi-exercises/es6-exercises/blob/master/07-concise-properties-and-methods.js
 
-### Template Literals (5 / 85)
+<!--9:20 5 minutes -->
 
-Remember string interpolation from ruby? We've been able to semi-accomplish this
-with string concatenation in javascript:
+### Template Literals
+
+Remember string concatenation in Javascript?
 
 ```js
 var name = "Inigo Montoya"
@@ -53,7 +68,7 @@ var prepareTo = "die"
 console.log("Hello. My name is "+ name + ". You killed my " + killee +". Prepare to " + prepareTo)
 ```
 
-In ES6, we can interpolate variables using template literal syntax: `\``
+Annoying to try and remember all of those `+` signs right?  In ES6, we can interpolate variables using template literal syntax:
 
 ```js
 let name = "Inigo Montoya"
@@ -61,14 +76,19 @@ let killee = "father"
 let prepareTo = "die"
 
 console.log(`Hello. My name is ${name}. You killed my ${killee}. Prepare to ${prepareTo}`)
-
 ```
 
-#### You do: Template Exercise (5 / 90)
+Way easier, right?
+
+<!--9:25 5 minutes -->
+
+#### You do: Template Exercise
 
 1. https://github.com/ga-wdi-exercises/es6-exercises/blob/master/09-templates.js
 
-### Arrow Functions (15 / 105)
+<!--9:30 10 minutes -->
+
+### Arrow Functions
 
 Arrow functions are a new shorthand syntax for defining anonymous functions:
 
@@ -99,7 +119,7 @@ var pizza = {
   toppings: ["cheese", "ham", "pineapple"],
   bake() {
     setInterval(function(){
-      this.temperature++ // doesnt work because this is GLOBAL. The setInterval function belongs to the window object.
+      this.temperature++ // doesn't work because this is GLOBAL. The setInterval function belongs to the window object.
     }, 1000)
   }
 }
@@ -127,6 +147,7 @@ If the function is multi-line, you need to explicitly return:
 
 ```js
 let add = (x,y) => {
+  console.log(x + y)
   return x + y
 }
 ```
@@ -139,20 +160,13 @@ let add = (x,y) => (
 )
 ```
 
-#### You do: Arrow functions (10 / 115)
+<!--9:40 10 minutes -->
+
+#### You do: Arrow functions
 
 1. https://github.com/ga-wdi-exercises/es6-exercises/blob/master/11-arrow-functions.js
 
-
-## Legacy Browser Support (5 / 120)
-
-Support for ES6 is great! - https://kangax.github.io/compat-table/es6/
-
-If you need to support a legacy browser, check out the following tools:
-- [Traceur](https://github.com/google/traceur-compiler/wiki/Getting-Started)
-- [Babel](https://babeljs.io/)
-
-## Bonus
+<!--9:50 10 minutes -->
 
 ### Spread operator
 
@@ -205,9 +219,21 @@ console.log(reversedDays(days))
 console.log(days)
 ```
 
+<!--10:00 10 minutes -->
+
 #### You do: Spread Practice
 
 1. https://github.com/ga-wdi-exercises/es6-exercises/blob/master/03-spread-practice.js
+
+<!--10:10 5 minutes -->
+
+## Legacy Browser Support
+
+Support for ES6 is great! - https://kangax.github.io/compat-table/es6/
+
+If you need to support a legacy browser, check out the following tools:
+- [Traceur](https://github.com/google/traceur-compiler/wiki/Getting-Started)
+- [Babel](https://babeljs.io/)
 
 ## Keep Going
 
