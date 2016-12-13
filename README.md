@@ -52,6 +52,8 @@ let obj = {x,y}
 
 #### You do: Concise methods and properties practice
 
+Use both of these concise syntaxes in the exercise below:
+
 1. https://github.com/ga-wdi-exercises/es6-exercises/blob/master/07-concise-properties-and-methods.js
 
 <!--9:20 5 minutes -->
@@ -111,9 +113,10 @@ let foods = ["pizza","mac n cheese","lasagna"]
 foods.forEach( (food,i) => console.log(`My #${i} favorite food is ${food}`) )
 ```
 
-Arrow functions also have the benefit of not changing the value of `this`:
+Arrow functions also have the benefit of lexical scoping, which is a fancy way of saying it uses “this” from the surrounding code: the code that contains the code in question.  See how this can be helpful below:
 
 ```js
+//Function scoped in ES5
 var pizza = {
   temperature: 0,
   toppings: ["cheese", "ham", "pineapple"],
@@ -124,7 +127,7 @@ var pizza = {
   }
 }
 
-// vs ES6
+// vs Lexically Scoped in ES6
 
 var pizza = {
   temperature: 0,
@@ -152,17 +155,11 @@ let add = (x,y) => {
 }
 ```
 
-Though the single line return can be faked by wrapping the expression in parentheses:
-
-```js
-let add = (x,y) => (
-  x + y
-)
-```
-
 <!--9:40 10 minutes -->
 
 #### You do: Arrow functions
+
+> **Hint:** If you are stuck on the `reduce` part of the exercise below, remember you can include an initial value after your arrow function (0 perhaps?).
 
 1. https://github.com/ga-wdi-exercises/es6-exercises/blob/master/11-arrow-functions.js
 
@@ -175,8 +172,8 @@ The spread operator `...` allows an expression to be expanded into multiple elem
 This is useful for separating an array into individual elements:
 
 ```js
-var dimensions = [10, 5, 2];
-var volume = function(height, width, length){
+let dimensions = [10, 5, 2];
+let volume = function(height, width, length){
   return height * width * length;
 }
 volume(...dimensions);
@@ -219,13 +216,17 @@ console.log(reversedDays(days))
 console.log(days)
 ```
 
-<!--10:00 10 minutes -->
+<!--10:00 5 minutes -->
 
 #### You do: Spread Practice
 
-1. https://github.com/ga-wdi-exercises/es6-exercises/blob/master/03-spread-practice.js
+**Challenge:** How might you use template literals, a spread operator, and an array of `name`, `day`, and `adjective`, to make a greeting function that prints out:
 
-<!--10:10 5 minutes -->
+`Hello, Zeb, today is Tuesday, isn't it a wonderful day?`
+
+Tweak the values of those variables and test it again.
+
+<!--10:05 5 minutes -->
 
 ## Legacy Browser Support
 
