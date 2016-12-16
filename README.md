@@ -9,6 +9,9 @@
 
 - **Compare/contrast** features of ES5 and ES6
 - **Shorten** methods and properties with new ES6 syntax
+- **Use** template literals to minimize string concatenation
+- **Use** arrow functions to simplify anonymous function definitions
+- **Use** the spread operator to manage an array of input
 
 <!--9:10 5 minutes -->
 
