@@ -85,6 +85,8 @@ console.log(`Hello. My name is ${name}. You killed my ${killee}. Prepare to ${pr
 
 Way easier, right?
 
+<!-- Actually 9:27 -->
+
 <!--9:25 5 minutes -->
 
 #### You do: Template Exercise
@@ -157,6 +159,8 @@ let add = (x,y) => {
   return x + y
 }
 ```
+
+<!--Actually 9:46 -->
 
 <!--9:40 10 minutes -->
 
@@ -238,6 +242,8 @@ Support for ES6 is great! - https://kangax.github.io/compat-table/es6/
 If you need to support a legacy browser, check out the following tools:
 - [Traceur](https://github.com/google/traceur-compiler/wiki/Getting-Started)
 - [Babel](https://babeljs.io/)
+
+<!--I think we were like 10:20 or so here, maybe 10:23-->
 
 ## Keep Going
 
